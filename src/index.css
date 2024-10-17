@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.banner-bg {
+  background-image: linear-gradient(rgba(4, 4, 134, 0.32) 1px, transparent 2px),
+    linear-gradient(to right, rgba(4, 4, 134, 0.32) 1px, transparent 2px);
+  background-size: 32px 32px;
+  background-color: #ffffff;
+}
+.dark-texts {
+  color: #040486;
+}
+.bt-color {
+  background-color: #0000ff;
+}
+
+.card-1 {
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.21);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.highlight {
+  color: red;
+}
+.working {
+  background: url(/contact-background.avif);
+  background-size: cover;
+  height: fit-content;
+}
+.work {
+  background: url(/about.jpg);
+  background-size: cover;
+  height: fit-content;
+}
+.card-bg {
+  background-color: #f6f3f3;
+}
+
+.tab-button {
+  transition: border-color 0.3s;
+}
+.tab-button:hover {
+  border-color: var(--primary);
+}
+.tab-panel {
+  display: none;
+}
+.tab-panel:not(.hidden) {
+  display: block;
+}
+
+.ltspc {
+  letter-spacing: 0.2em;
+}
+
+/* scroll */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 90%;
+  }
+}
+
+.element-scroll {
+  animation: fadeIn 0.8s forwards;
+  animation-timeline: inherit;
+}
+
+/* scrollin */
+@keyframes revealFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* floating hover */
+/* Tailwind custom CSS */
+@keyframes rotateLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-preload {
+  position: relative;
+}
+
+.hover-preload::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #891652;
+  animation: rotateLoader 1s linear infinite;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-preload:hover::before {
+  opacity: 1;
+}
+/* floating hover */
+
+/* Apply animation to the element */
+.element-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: revealFromLeft 1s ease-out forwards;
+  animation-delay: 0.3s; /* You can adjust the delay as needed */
+}
+
+/* Optionally, you can use this to apply the animation when hovering */
+.element-left:hover {
+  animation: revealFromLeft 1s ease-out forwards;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* scroll */
+/* rotate */
+.rotate-path {
+  transform-origin: center;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* rotate */
+
+
+.bg-image-left {
+  background: url(/vector-1.png);
+  background-position: right;
+}
+
+.bg-image-via {
+  background: url(/blog.avif);
+  background-size: cover;
+  height: fit-content;
+}
+.bg-contact {
+  background: url(/contact.avif);
+  background-size:contain;
+  height: fit-content;
+}
+
+.bg-image1 {
+  background-image: url(/service.avif);
+  background-size: cover;
+  height: fit-content;
+}
+.bg-image2 {
+  background-image: linear-gradient(to bottom, transparent, #00000070),
+    url("/career.avif");
+  background-position: center;
+  background-size: cover;
+  background-position: top;
+  /*background-attachment: fixed;*/
+  backdrop-filter: blur(3px);
+  background-color: #000;
+}
+
+.card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.51);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.vertical-card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.51);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+/* Tab Menu */
+
+.active h2 {
+  color: #e74c3c;
+}
+
+.active .section-content {
+  color: #e74c3c;
+}
+
+/* Image Cards for service page */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+figure:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+figure:hover figcaption {
+  height: 70%;
+  transition-delay: 0.5s;
+}
+
+figure:hover h2 {
+  opacity: 0.9;
+  transform: translateY(0%);
+  transition-delay: 0.1s;
+}
+
+figure h2 {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+figure {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Gallery */
+
+
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
