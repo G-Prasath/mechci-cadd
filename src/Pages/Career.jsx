@@ -61,12 +61,10 @@ const Career = () => {
       method: "POST",
       body: formData, // FormData object
     });
-
+    setLoading(false);
     reset();
   } catch (error) {
     console.error("Error:", error);
-  } finally {
-    setLoading(false);
   }
 };
 

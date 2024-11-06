@@ -16,7 +16,7 @@ const About = () => {
       <SectionOne/>
       <SectionTwo/>
       <WhyChoose/>
-      <OurTeam/>
+      {/* <OurTeam/> */}
       <Gallery/>
       <Cta/>
       <Clients/>

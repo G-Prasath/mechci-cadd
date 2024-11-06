@@ -50,6 +50,8 @@ function Form() {
         body: JSON.stringify(data),
       });
       // Handle successful response
+      setLoading(false);
+
       reset();
     } catch (error) {
       console.error("Error:", error);

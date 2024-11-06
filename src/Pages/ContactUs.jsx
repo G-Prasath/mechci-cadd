@@ -44,13 +44,12 @@ const ContactUs = () => {
         },
         body: JSON.stringify(data),
       });
+      setLoading(false);
        reset();
       // Handle successful response
     } catch (error) {
       console.error("Error:", error);
       // Handle error
-    } finally {
-      setLoading(false);
     }
   };
 
